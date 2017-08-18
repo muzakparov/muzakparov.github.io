@@ -6,11 +6,17 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/algoCss.css">
+    <link rel="stylesheet" href="css/quicksort.css">
+    <link rel="stylesheet" href="css/quote.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="css/pomodoro.css">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Playfair+Display|Raleway|Ribeye+Marrow|Pacifico" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon/favicon-32.png">
     <title>Bakhtiiar Muzakparov | Web Developer</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -32,9 +38,9 @@
           </button>
                 </div>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#about">About</a></li>                   
                     <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -43,13 +49,18 @@
     </header>
     </div>
 
-    <a href="#" class="top"><i class="fa fa-chevron-up"></i></a>
+    <a href="#about" class="top"><i class="fa fa-chevron-up"></i></a>
 
     <!-- ABOUT -->
     <div class="section1" id="about">
         <h3>About Me</h3>
         <div class="bio">
-            <img class="pic" src="http://res.cloudinary.com/de3hziulu/image/upload/v1500812201/profile_img_rr1sz0.png">
+            <div class="pic-container">
+                <img class="pic" src="http://res.cloudinary.com/de3hziulu/image/upload/v1500812201/profile_img_rr1sz0.png">
+                <div class="overlay">
+                    <div class="hire">Hire Me Now!</div>
+                </div>
+            </div>
             <p>Hello, I am <strong>Bakhtiiar Muzakparov </strong> and I am self-taught web developer</p>
 
             <p>
@@ -74,11 +85,16 @@
 
     <div class="section1" id="portfolio">
         <h3>Portfolio</h3>
+        <!-- Quicksort -->
         <div id="panel">
             <div id="buttons">
                 <a class="button" id="btReset" href="javascript://">Reset</a>
-                <a class="button" id="btStart" href="javascript://">Start</a>
-
+                <div class="pulse-container">
+                <a class="button" id="btStart" href="javascript://">Start</a>               
+               
+                        <div class="pulse-bg"></div>
+                        <div class="pulse-button"></a></button></div>
+                </div>
             </div>
 
             <div id="left">
@@ -90,44 +106,103 @@
                 <h2 id="quicksort">Quicksort</h2>
             </div>
         </div>
-        <div class="thumb-container clearfix">
+       
+        <!-- Quote -->
+        <div id="quote">
+            <div class="quote">
+              <p class='rand-quote'><i class='fa fa-quote-left'></i><span class='q'></span><i class='fa fa-quote-right'></i></p>
+              <p class='author'></p>
+            </div>
+            <div class="button-container">
+              <button class="twitter-button btn back-color" target="_blank"><i class="fa fa-twitter"></i></button>
+              <button class="tumblr-button btn  back-color" target="_blank"><i class="fa fa-tumblr"></i></button>
+              <button id="new-quote" class="back-color btn pull-right">New quote</button>
+            </div>  
+        </div>
 
-            <a class="thumb-unit one" href="http://www.omimagick.com/" target="_blank">
-                <div class="thumb-overlay">
-                    <p class="text">Omi Naturals</p>
+        <!-- Two -->
+        <div class="two-projects">
+            <div id="first-project">
+            <!-- Calculator -->
+                <div id="calculator">
+                    <!-- Screen and clear key -->
+                    <div class="top">
+                        <span class="clear">C</span>
+                        <div class="screen"></div>
+                    </div>
+            
+                    <div class="keys">
+                        <!-- operators and other keys -->
+                        <span>7</span>
+                        <span>8</span>
+                        <span>9</span>
+                        <span class="operator">+</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span class="operator">-</span>
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span class="operator">&divide;</span>
+                        <span>0</span>
+                        <span>.</span>
+                        <span class="eval">=</span>
+                        <span class="operator">x</span>
+                    </div>
                 </div>
-            </a>
-
-            <a class="thumb-unit two" href="https://bree-eros.github.io/redneval/" target="_blank">
-                <div class="thumb-overlay">
-                    <p class="text">Red Neval</p>
+            </div>
+            <div id="second-project">
+                <!-- Pomodoro -->
+                <div id="pomodoro">
+                    <h1>Pomodoro Clock</h1>
+                    <hr/>
+                    <div class="row time-adjust">
+                    <div class="break">
+                        <ul class="list-inline">
+                        <li>
+                            <a  class="fa fa-minus" id="breakminus"></a>
+                        </li>
+                        <li>
+                            <p class="breakval"><span id="breakmin"></span>:00</p>
+                        </li>
+                        <li>
+                            <a  class="fa fa-plus" id="breakplus"></a>
+                        </li>
+                        </ul>
+                        <p><b>Break</b></p>
+                    </div>
+            
+                    <div class="session">
+                        <ul class="list-inline">
+                        <li>
+                            <a  class="fa fa-minus" id="sessionminus"></a>
+                        </li>
+                        <li>
+                            <p class="sessionval"><span id="sessionmin"></span>:00</p>
+                        </li>
+                        <li>
+                            <a  class="fa fa-plus" id="sessionplus"></a>
+                        </li>
+                        </ul>
+                        <p><b>Session</b></p>
+                    </div>
+                    <div class="timer">
+                        <div class="progress"></div>
+                        <h1 class="countdown" id='timer'></h1>
+                        <h2 id="text"></h2>
+                    </div>
+                    <div class="row controls">
+                        <button class='button' id='start'>start</button>
+                        <button class='button' id='pause'>pause</button>
+                        <button class='button' id='reset'>reset</button>
+                        <button class='button' id='startBreak'>start</button>
+                        <button class='button' id='pauseBreak'>pause</button>
+                        <button class='button' id='resetBreak'>reset</button>
+                    </div>
+                    </div>
                 </div>
-            </a>
-
-            <a class="thumb-unit three" href="http://codepen.io/Sketchgoddess/full/NNaqYX/" target="_blank">
-                <div class="thumb-overlay">
-                    <p class="text">A tribute to FKA twigs</p>
-                </div>
-            </a>
-
-            <a class="thumb-unit four" href="https://bree-eros.github.io/Storymaker/" target="_blank">
-                <div class="thumb-overlay">
-                    <p class="text">The Story Maker</p>
-                </div>
-            </a>
-
-            <a class="thumb-unit" href="">
-                <div class="thumb-overlay">
-                    <p class="text">Coming Soon</p>
-                </div>
-            </a>
-
-            <a class="thumb-unit" href="">
-                <div class="thumb-overlay">
-                    <p class="text">Coming Soon</p>
-
-                </div>
-            </a>
+            </div>
         </div>
     </div>
 
@@ -203,7 +278,10 @@
 
 
         <script type="text/javascript" src="js/script.js"></script>
-        <script src="js/algoScript.js"></script>
+        <script src="js/quicksort.js"></script>
+        <script src="js/quote.js"></script>
+        <script src="js/calculator.js"></script>
+        <script src="js/pomodoro.js"></script>
         <script src="https://use.fontawesome.com/09f8447328.js"></script>
     </footer>
 </body>

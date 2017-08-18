@@ -18,6 +18,7 @@
     position: relative;
     padding-left: 8px;
     background: #96ff4c;
+    transition: 0.5s;
 }
 
 #sortPanelA,
@@ -93,6 +94,7 @@ tr {
     background: rgb(198, 102, 35);
     float: left;
     padding-left: 8px;
+    transition: 0.5s;
 }
 
 a:link,
@@ -152,6 +154,8 @@ a:hover.disable {
     display: inline-block;
     text-align: center;
     text-decoration: underline;
+    color:#10ABE1;
+    text-shadow: none;
     padding-top: 1px;
 }
 
@@ -159,4 +163,8 @@ a:hover.disable {
 #btStart:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+}
+
+#left:hover, #right:hover{
+    transform: scale(1.2);
 }
