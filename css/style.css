@@ -773,3 +773,7 @@ div.two-projects{
       color:black;
       text-shadow: none;
   }
+
+ #portfolio .pulse-container:hover .pulse-bg, #portfolio .pulse-container:hover .pulse-button{
+      display: none;
+  }
