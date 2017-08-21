@@ -777,3 +777,28 @@ div.two-projects{
  #portfolio .pulse-container:hover .pulse-bg, #portfolio .pulse-container:hover .pulse-button{
       display: none;
   }
+
+
+  
+  @media only screen and (max-width:680px){
+    div#left,div#right{
+        width:100%;
+        margin:auto;
+        margin-bottom: 60px;
+    }
+    div#panel{
+        height: 380px;
+    }
+
+    div#portfolio{
+        height:2070px;
+    }
+
+    #quote .quote{
+        width:auto;
+    }
+
+    #quote .button-container{
+        margin:0;
+    }
+}
